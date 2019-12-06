@@ -1,0 +1,16 @@
+include LICENSE *.rst *.py
+include setup.cfg
+exclude .gitignore
+prune .git
+prune build
+prune dist
+prune cache
+recursive-exclude env *
+recursive-exclude *.egg-info *
+recursive-include tests *
+recursive-include docs *
+recursive-exclude docs *.pyc
+recursive-exclude docs *.pyo
+recursive-include openshift-python-flask-sample *.pyc
+recursive-include openshift-python-flask-sample *.pyo
+prune docs/_build
