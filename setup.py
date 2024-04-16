@@ -10,7 +10,6 @@
     :license: WTFPL, see LICENSE for more details.
 """
 import io
-from openshift-python-flask-sample import __version__
 from os.path import abspath, dirname, join
 
 try:
@@ -19,12 +18,12 @@ except ImportError:
     from distutils.core import setup, find_packages
 
 this_dir = abspath(dirname(__file__))
-with io.open(join(this_dir, 'OVERVIEW.rst'), encoding='utf-8') as file:
+with io.open(join(this_dir, 'OVERVIEW.md'), encoding='utf-8') as file:
     long_description = file.read()
 
 config = {
     'name': 'openshift-python-flask-sample',
-    'version': __version__,
+    'version': '1.0',
     'description': 'An example on using Python+Flask in OpenShift',
     'long_description': long_description,
     'url': 'https://github.com/eitchugo/openshift-python-flask-sample',
@@ -57,13 +56,8 @@ config = {
     'packages': find_packages(exclude=['docs']),
     'include_package_data': True,
     'install_requires': [
-        'Flask>=0.10',
+        'Flask==3.0.3',
     ],
-    'entry_points': {
-        'console_scripts': [
-            'openshift-python-flask-sample=app.run'
-        ]
-    },
     'zip_safe': False
 }
 

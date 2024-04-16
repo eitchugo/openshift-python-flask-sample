@@ -1,4 +1,4 @@
-include LICENSE *.rst *.py
+include LICENSE *.md *.py
 include setup.cfg
 exclude .gitignore
 prune .git
