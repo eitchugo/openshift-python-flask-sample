@@ -56,7 +56,7 @@ config = {
     'packages': find_packages(exclude=['docs']),
     'include_package_data': True,
     'install_requires': [
-        'Flask==3.0.3',
+        'Flask==3.1.3',
     ],
     'zip_safe': False
 }
